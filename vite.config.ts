@@ -6,7 +6,7 @@ import vuetify from 'vite-plugin-vuetify';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "./",
+  base: "/  git add dist -f\nkhavin-solution/",
   plugins: [
     vue(),
     vuetify({ autoImport: true }), // Enabled by default
