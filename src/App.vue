@@ -1,18 +1,25 @@
 <template>
-    <v-app>
-        <v-app-bar>
+    <v-app :theme="style.appClassStyle">
+        <v-app-bar
+            :color="style.appBarBackgroundColor"
+            :elevation="10"
+            rounded>
             <v-container class="d-flex align-center py-0">
                 <v-app-bar-title class="pl-0">
                     <div class="d-flex align-center">
                         <v-avatar
                             rounded="0"
                             class="mr-3"
-                            image="https://cdn.vuetifyjs.com/docs/images/logos/v.png"
-                        />
-
-                        Vuetify 3
+                            image="./src/assets/logo.svg"/>
                     </div>
                 </v-app-bar-title>
+
+                <div class="d-flex align-center">
+                    <span class="company-menu mr-3"> HOME </span>
+                    <span class="company-menu mr-3"> PRODUCTS </span>
+                    <span class="company-menu mr-3"> COMPANY </span>
+                    <v-button> CONTACT US </v-button>
+                </div>
             </v-container>
         </v-app-bar>
 
@@ -25,7 +32,7 @@
                     <v-container class="text-center">
                         <v-responsive class="mx-auto" width="500">
                             <v-img
-                                src="https://cdn.vuetifyjs.com/docs/images/logos/v.png"
+                                src="./src/assets/logo.svg"
                                 height="400"
                             />
 
@@ -227,5 +234,6 @@
 </template>
 
 <script lang="ts">
-export default { name: 'App' }
+    import app from './app';
+    export default app;
 </script>
