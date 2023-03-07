@@ -1,0 +1,29 @@
+.btn {
+    width: fit-content;
+    padding: 8px;
+    cursor: pointer;
+    border: 1px solid;
+    border-radius: 8px;
+}
+
+.btn-primary {
+    color: #ececec;
+    font-weight: bold;
+    border-color: #0096EA;
+    background-color: #0096EA;
+}
+
+.btn-primary:hover {
+    background-color: #16aaff;
+    border-color: #16aaff;
+}
+
+.btn-trans-fill-primary {
+    color: #0096EA;
+    border-color: #0096EA;
+}
+
+.btn-trans-fill-primary:hover {
+    color: #16aaff;
+    border-color: #16aaff;
+}

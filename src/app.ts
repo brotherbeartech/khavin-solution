@@ -1,9 +1,10 @@
 import { defineComponent, ref } from 'vue';
 
 import { defaultMoonStyle } from './constants/style.constant';
+import { AppStyleModel } from './models/app-style-model';
 
 class KhavinApp {
-    public style: any;
+    public style: AppStyleModel;
 
     constructor() {
         this.style = defaultMoonStyle;

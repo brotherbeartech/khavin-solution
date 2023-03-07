@@ -1,11 +1,12 @@
 @import './base.css';
+@import '../styles/v-custom.css';
+@import '../styles/khavin-home.css';
+@import '../styles/button.css';
 
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-
-  font-weight: normal;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
 }
 
 a,
@@ -13,6 +14,11 @@ a,
   text-decoration: none;
   color: hsla(160, 100%, 37%, 1);
   transition: 0.4s;
+}
+
+.khavin-moon-style {
+  background-color: #062231;
+  color: #dddddd;
 }
 
 @media (hover: hover) {
@@ -28,8 +34,6 @@ a,
   }
 
   #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+    
   }
 }
