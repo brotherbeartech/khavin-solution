@@ -12,6 +12,7 @@ export default defineConfig({
     vuetify({ autoImport: true }), // Enabled by default
   ],
   resolve: {
+    extensions: ['.ts', '.js', '.vue', '.json'],
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
