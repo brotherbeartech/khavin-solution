@@ -48,7 +48,17 @@
     </v-app>
 </template>
 
-<script lang="ts">
-import app from './app';
-export default app;
+<script lang="ts" setup>
+import {Test} from '@/models/test';
+import {ref} from 'vue';
+const a = ref<Test>({
+    age: 1,
+    name: 'test',
+    address: 'test'
+})
+
+setInterval(() => {
+    a.value.age += 1;
+    a.value.name += 'test';
+}, 1000)
 </script>
