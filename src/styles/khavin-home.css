@@ -1,6 +1,29 @@
-#khavin_banner {
+.v-main {
+    overflow-y: auto;
+}
+
+.primary-font-color {
+    color: #0096EA;
+}
+
+.light-font-color {
+    color: #56C2FF;
+}
+
+.home-section {
     width: 100%;
     height: 100%;
+}
+
+.khavin-title {
+    font-size: 72px;
+    font-weight: bold;
+    
+}
+
+.khavin-sub-title {
+    font-size: 48px;
+    line-height: 55px;
 }
 
 #khavin_banner > .banner {
@@ -14,6 +37,26 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.discovery-section {
+    position: relative;
+    display: flex;
+    padding: 0 100px;
+}
+
+.customer-section {
+    background-color: #a5e6ff;
+    background-image: url('../assets/skyscrapers-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.customer-section > .customers-info-container {
+    background-color: rgba(39, 65, 80, 95%);
+    padding: 50px 20px;
 }
 
 .banner > .blur-layer {
@@ -49,3 +92,51 @@
     font-size: 55px;
     color: #0096EA;
 }
+
+.discovery-section > .discovery-switch {
+    width: 50px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.discovery-switch > .discovery-node {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #A7DFFF;
+    margin: 10px;
+}
+
+.discovery-switch > .discovery-devider {
+    width: 1px;
+    height: 15%;
+    border-left: 1px dashed #0096EA;
+}
+
+.discovery-switch > .discovery-active-node {
+    background-color: #0096EA;
+}
+
+.discovery-section > .discovery-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.discovery-content > .discovery-content-item {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 120px;
+    max-width: 1052px;
+}
+
+.discovery-content-item > .discovery-content-item-details {
+    max-width: 580px;
+}
+
