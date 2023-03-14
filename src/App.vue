@@ -122,8 +122,7 @@
 </template>
 
 <script lang="ts">
-    import { clearInterval } from 'timers';
-import { defaultMoonStyle } from './constants/style.constant'
+    import { defaultMoonStyle } from './constants/style.constant'
 
     let intervalItem: any;
 
