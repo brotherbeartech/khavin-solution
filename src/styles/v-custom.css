@@ -3,3 +3,7 @@
     height: 100vh;
     position: relative;
 }
+
+.v-footer {
+    padding: 0;
+}

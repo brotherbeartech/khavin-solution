@@ -25,6 +25,22 @@ a,
   cursor: pointer;
 }
 
+.m-r-15 {
+  margin-right: 15px;
+}
+
+.font-style-italic {
+  font-style: italic;
+}
+
+.danger-message {
+  color: #e41616;
+}
+
+.success-message {
+  color: rgb(0, 202, 0);
+}
+
 @media (hover: hover) {
   a:hover {
     background-color: hsla(160, 100%, 37%, 0.2);
