@@ -1,7 +1,7 @@
 export const Customers = [
     {
         name: 'SPL Solution',
-        icon: './src/assets/customer_ebtic_spl.png',
+        icon: 'assets/customer_ebtic_spl.png',
         contents: [
             'SPL Solutions improves the success of IT Legacy code migration to the cloud, while reducing costs by at least 30%. The product has been implemented and proven by BT plc.',
             'Our AI-based engine, analyzes source code and understands its key functionality and dependencies. Our advanced visualization allows for quick assessments and faster decision making.',

@@ -4,7 +4,7 @@
             <v-container class="d-flex align-center py-0">
                 <v-app-bar-title class="pl-0">
                     <div class="d-flex align-center">
-                        <v-avatar rounded="0" class="mr-3" image="./src/assets/logo.svg" />
+                        <v-avatar rounded="0" class="mr-3" :image="appLogo" />
                     </div>
                 </v-app-bar-title>
 
@@ -12,7 +12,8 @@
                     <span class="company-menu cursor-pointer mr-3"> HOME </span>
                     <span class="company-menu cursor-pointer mr-3"> PRODUCTS </span>
                     <span class="company-menu cursor-pointer mr-3"> COMPANY </span>
-                    <v-button class="btn btn-primary"> CONTACT US </v-button>
+                    <v-button class="btn btn-primary"
+                        @click="scrollToDiscoverySection('stayConnectedSection')"> CONTACT US </v-button>
                 </div>
             </v-container>
         </v-app-bar>
@@ -23,14 +24,17 @@
                     <div class="blur-layer"></div>
                     <div class="banner-content">
                         <div class="logo">
-                            <v-img src="./src/assets/logo.svg" height="400" />
+                            <v-img :src="appLogo" height="400" />
                         </div>
 
                         <div class="banner-title">
                             <h1 :style="{ 'color': style.priorityFontColor }"> KHAVIN SOLUTION </h1>
                             <h2> <i> EVERYTHING IS POSSIBLE </i> </h2>
                             <div class="w-100 d-flex align-center justify-center">
-                                <v-button class="btn btn-trans-fill-primary" :style="{ 'font-size': '32px' }"> DISCOVERY
+                                <v-button 
+                                    class="btn btn-trans-fill-primary" 
+                                    :style="{ 'font-size': '32px' }"
+                                    @click="scrollToDiscoverySection('homeDiscoverySection')"> DISCOVERY
                                 </v-button>
                             </div>
                         </div>
@@ -39,7 +43,7 @@
                 </div>
             </section>
 
-            <section class="home-section discovery-section">
+            <section class="home-section discovery-section" id="homeDiscoverySection">
                 <div class="discovery-switch">
                     <template v-for="item in discoveries">
                         <div class="discovery-node cursor-pointer"
@@ -66,7 +70,7 @@
                             </div>
 
                             <div class="discovery-content-item-image">
-                                <v-img src="./src/assets/futures_explain.png" width="350" height="350"></v-img>
+                                <v-img :src="futureExplainPic" width="350" height="350"></v-img>
                             </div>
                         </div>
                     </template>
@@ -86,7 +90,7 @@
                             </div>
 
                             <div class="discovery-content-item-image">
-                                <v-img src="./src/assets/HandShake.png" width="350" height="350"></v-img>
+                                <v-img :src="handshakepic" width="350" height="350"></v-img>
                             </div>
                         </div>
                     </template>
@@ -104,7 +108,7 @@
                             </div>
 
                             <div class="discovery-content-item-image">
-                                <v-img src="./src/assets/construction.png" width="350" height="350"></v-img>
+                                <v-img :src="constructionPic" width="350" height="350"></v-img>
                             </div>
                         </div>
                     </template>
@@ -137,10 +141,10 @@
                 </div>
             </section>
 
-            <section class="home-section stay-connect-section w-100 h-100">
+            <section class="home-section stay-connect-section w-100 h-100" id="stayConnectedSection">
                 <div class="stay-connect-container w-100 h-100">
                     <div class="stay-connect-logo">
-                        <v-img src="./src/assets/logo.svg" width="265" height="425"></v-img>
+                        <v-img :src="appLogo" width="265" height="425"></v-img>
                     </div>
 
                     <div class="stay-connect-form">
@@ -201,7 +205,7 @@
 
             <section class="khavin-footer-element d-flex align-center justify-end">
                 <div class="khavin-authorize d-flex align-center">
-                    <v-img src="./src/assets/Logo_xanh.png" width="122" height="45"></v-img>
+                    <v-img :src="blueLogo" width="122" height="45"></v-img>
 
                     <span>© 2021. All rights reserved.  Khavin Solution</span>
                 </div>
@@ -225,12 +229,18 @@ const apiService: APIFactoryService = new APIFactoryService();
 
 export default {
     data() {
+        const prefixPath = `${apiService.isDevEnvironment() ? './src' : '.'}`;
+        const _customerList = Customers.map(customer => ({
+            ...customer,
+            icon: `${prefixPath}/${customer.icon}`
+        }));
+
         return {
             style: defaultMoonStyle,
             discoverySection: 1,
             discoveries: [1, 2, 3],
-            selectedCustomer: Customers[0],
-            customers: Customers,
+            selectedCustomer: _customerList[0],
+            customers: _customerList,
             contacts: ContactPurpose,
             firstName: '',
             lastName: '',
@@ -239,6 +249,11 @@ export default {
             contactHint: '',
             errorMessage: '',
             successMessage: '',
+            appLogo: `${prefixPath}/assets/logo.svg`,
+            blueLogo: `${prefixPath}/assets/Logo_xanh.png`,
+            futureExplainPic: `${prefixPath}/assets/futures_explain.png`,
+            handshakepic: `${prefixPath}/assets/HandShake.png`,
+            constructionPic: `${prefixPath}/assets/construction.png`
         }
     },
     methods: {
@@ -257,6 +272,9 @@ export default {
 
                 this.changeDiscoveryView(nextSection, false);
             }, 5000);
+        },
+        scrollToDiscoverySection(id: string) {
+            document.getElementById(id)?.scrollIntoView();
         },
         submitContactForm(): void {
             if (!this.firstName) {
