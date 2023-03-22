@@ -2,6 +2,7 @@
 @import '../styles/v-custom.css';
 @import '../styles/khavin-home.css';
 @import '../styles/button.css';
+@import '../styles/company.css';
 
 #app {
   overflow: hidden;

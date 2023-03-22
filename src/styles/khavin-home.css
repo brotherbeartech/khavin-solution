@@ -211,3 +211,19 @@
     align-items: flex-end;
     margin: 0 20px 0 50px;
 }
+
+.company-menu {
+    border-bottom: 0;
+    padding: 0 8px;
+}
+
+.company-menu:hover {
+    border-bottom: 2px solid #0096EA;
+}
+
+@media (max-width: 768px) {
+    .pragraphs {
+        max-height: 400px;
+        overflow-y: auto;
+    }
+}

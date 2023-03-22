@@ -25,4 +25,9 @@ export const ContactPurpose = [
         id: 2,
         name: 'Carrer'
     }
-]
+];
+
+export const SUPPABASE_KEY = {
+    URL: 'https://fsinmcyurmnpddpftitt.supabase.co',
+    ANNON_KEY: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZzaW5tY3l1cm1ucGRkcGZ0aXR0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzk0Njc0NzcsImV4cCI6MTk5NTA0MzQ3N30.xCKICRXncJsqmlf1n4S8CCEN6ZTCTeOfUymeILzuX9A'
+};

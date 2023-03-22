@@ -2,8 +2,10 @@ import { AxiosService } from "./post-email.service";
 
 export class APIFactoryService {
 
-    private services: any = {
-        email: new AxiosService()
+    private services: {
+        email: AxiosService,
+    } = {
+        email: new AxiosService(),
     }
 
     private _environment: any;
@@ -13,6 +15,7 @@ export class APIFactoryService {
     }
 
     public async post(postService: string, params: any): Promise<any> {
+        // @ts-ignore
         return this.services[postService].sendEmail(params);
     }
 
