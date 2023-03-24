@@ -12,8 +12,8 @@
           <span class="company-menu cursor-pointer mr-3" @click="navigateToPage('home')"> HOME </span>
           <span class="company-menu cursor-pointer mr-3" @click="navigateToPage('products')"> PRODUCTS </span>
           <span class="company-menu cursor-pointer mr-3" @click="navigateToPage('company')"> COMPANY </span>
-          <v-button class="btn btn-primary" @click="scrollToDiscoverySection('stayConnectedSection')"> CONTACT US
-          </v-button>
+          <button class="btn btn-primary" @click="scrollToDiscoverySection('stayConnectedSection')"> CONTACT US
+          </button>
         </div>
       </v-container>
     </v-app-bar>

@@ -11,9 +11,9 @@
           <h1 :style="{ 'color': style.priorityFontColor }"> KHAVIN SOLUTION </h1>
           <h2> <i> EVERYTHING IS POSSIBLE </i> </h2>
           <div class="w-100 d-flex align-center justify-center">
-            <v-button class="btn btn-trans-fill-primary" :style="{ 'font-size': '32px' }"
+            <button class="btn btn-trans-fill-primary" :style="{ 'font-size': '32px' }"
               @click="scrollToDiscoverySection('homeDiscoverySection')"> DISCOVERY
-            </v-button>
+            </button>
           </div>
         </div>
       </div>
