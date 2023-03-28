@@ -21,6 +21,7 @@ export class DatabaseService {
         return this.supabase
             .from('members')
             .select('name, avatar, description, slogan, positions:position (name, permission, description)')
+            .filter('active', 'eq', true)
             .order('id', { ascending: true });
     }
 }
