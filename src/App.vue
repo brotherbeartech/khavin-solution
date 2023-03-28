@@ -1,231 +1,103 @@
 <template>
-    <v-app>
-        <v-app-bar>
-            <v-container class="d-flex align-center py-0">
-                <v-app-bar-title class="pl-0">
-                    <div class="d-flex align-center">
-                        <v-avatar
-                            rounded="0"
-                            class="mr-3"
-                            image="https://cdn.vuetifyjs.com/docs/images/logos/v.png"
-                        />
+  <v-app :class="style.appClassStyle">
+    <v-app-bar :color="style.appBarBackgroundColor" :elevation="10" rounded>
+      <v-container class="d-flex align-center py-0">
+        <v-app-bar-title class="pl-0">
+          <div class="d-flex align-center">
+            <v-avatar rounded="0" class="mr-3" :image="appLogo" />
+          </div>
+        </v-app-bar-title>
 
-                        Vuetify 3
-                    </div>
-                </v-app-bar-title>
-            </v-container>
-        </v-app-bar>
+        <div class="d-flex align-center">
+          <span class="company-menu cursor-pointer mr-3" @click="navigateToPage('home')"> HOME </span>
 
-        <v-main>
-            <section id="hero">
-                <v-sheet
-                    class="d-flex align-center pb-16"
-                    color="grey-darken-3"
-                >
-                    <v-container class="text-center">
-                        <v-responsive class="mx-auto" width="500">
-                            <v-img
-                                src="https://cdn.vuetifyjs.com/docs/images/logos/v.png"
-                                height="400"
-                            />
+          <v-menu>
+            <template v-slot:activator="{ props }">
+              <v-btn
+                class="btn btn-transparent"
+                variant="text"
+                :min-width="100"
+                v-bind="props"
+              >
+                <span class="light-font-color"> Products </span>
+              </v-btn>
+            </template>
 
-                            <h3 class="text-h3">
-                                Try the new Vuetify
-                            </h3>
+            <v-list
+              class="dropdown-light-theme">
+              <v-list-item
+                v-for="(item, index) in products"
+                :key="index"
+                :value="index"
+                @click="navigateToPage(item.route)"
+              >
+                <v-list-item-title>{{ item.title }}</v-list-item-title>
+              </v-list-item>
+            </v-list>
+          </v-menu>
 
-                            <p class="mt-4 text-medium-emphasis">
-                                This is a basic Vuetify 3 application designed to help get your feet wet with the next version of the framework. Visit our <a href="https://next.vuetifyjs.com/" target="_blank" rel="noopener noreferrer">documentation</a> for more information.
-                            </p>
-                        </v-responsive>
-                    </v-container>
-                </v-sheet>
-            </section>
+          <span class="company-menu cursor-pointer mr-3" @click="navigateToPage('company')"> COMPANY </span>
+          <button class="btn btn-primary" @click="scrollToDiscoverySection('stayConnectedSection')"> CONTACT US
+          </button>
+        </div>
+      </v-container>
+    </v-app-bar>
 
-            <v-sheet class="py-16">
-                <section id="filter">
-                    <v-container>
-                        <v-row justify="space-between">
-                            <v-col cols="auto">
-                                <v-responsive width="350">
-                                    <h2 class="text-h4">
-                                        New customization system
-                                    </h2>
+    <v-main>
+      <router-view></router-view>
 
-                                    <p class="text-success mt-3">
-                                        Global Defaults
-                                    </p>
+      <section class="khavin-footer-element d-flex align-center justify-end">
+        <div class="khavin-authorize d-flex align-center">
+          <v-img :src="blueLogo" width="122" height="45"></v-img>
 
-                                    <strong class="mt-3">
-                                        Version 3 Only
-                                    </strong>
+          <span>© 2021. All rights reserved. Khavin Solution</span>
+        </div>
 
-                                    <p class="mt-8">
-                                        Vuetify 3 has an unprecedented level of customization options that make implementing any design system easy.
-                                    </p>
-
-                                    <p class="mt-8">
-                                        Assign default values for all components in the library, including nested support.
-                                    </p>
-
-                                    <v-btn
-                                        class="mt-6"
-                                        href="https://next.vuetifyjs.com/features/global-configuration/"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        More Information
-                                    </v-btn>
-                                </v-responsive>
-                            </v-col>
-
-                            <v-img
-                                max-width="400"
-                                src="https://cdn.vuetifyjs.com/store/themes/vite-free/chips-bar.png"
-                            />
-                        </v-row>
-                    </v-container>
-                </section>
-
-                <v-container>
-                    <v-divider class="my-12" />
-                </v-container>
-
-                <section id="controls">
-                    <v-container>
-                        <v-row justify="space-between">
-                            <v-col cols="auto">
-                                <v-responsive width="350">
-                                    <h2 class="text-h4">
-                                        Rebuilt from the ground up
-                                    </h2>
-
-                                    <p class="text-success mt-3">
-                                        Composition API
-                                    </p>
-
-                                    <p class="mt-3">
-                                        Vuetify 3 uses the Vue composition API to build easy-to-use and feature rich components that work out of the box.
-                                    </p>
-
-                                    <p class="mt-8">
-                                        <strong>How to use:</strong>
-
-                                        Services are now accessed through <strong>use functions</strong> that follow the Vue 3 nomenclature and code styling.
-                                    </p>
-
-                                    <v-btn
-                                        class="mt-6"
-                                        href="https://next.vuetifyjs.com/introduction/why-vuetify/"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        More Information
-                                    </v-btn>
-                                </v-responsive>
-                            </v-col>
-
-                            <v-img
-                                max-width="400"
-                                src="https://cdn.vuetifyjs.com/store/themes/vite-free/slider.png"
-                            />
-                        </v-row>
-                    </v-container>
-                </section>
-
-                <v-container>
-                    <v-divider class="my-12" />
-                </v-container>
-
-                <section id="grid">
-                    <v-container>
-                        <v-row justify="space-between">
-                            <v-col cols="auto">
-                                <v-responsive width="350">
-                                    <h2 class="text-h4">
-                                        The most complete version yet
-                                    </h2>
-
-                                    <p class="text-success mt-3">
-                                        Available now!
-                                    </p>
-
-                                    <p class="mt-3">
-                                        The latest version is almost here. Use one of our free themes to get a head start!
-                                    </p>
-
-                                    <p class="mt-8">
-                                        This theme is designed to demonstrate a basic single page application using Vuetify 3.
-                                    </p>
-
-                                    <v-btn class="mt-6">
-                                        More Information
-                                    </v-btn>
-                                </v-responsive>
-                            </v-col>
-
-                            <v-img
-                                max-width="400"
-                                src="https://cdn.vuetifyjs.com/store/themes/vite-free/layout.png"
-                            />
-                        </v-row>
-                    </v-container>
-                </section>
-            </v-sheet>
-
-            <v-sheet
-                class="py-16"
-                color="#181818"
-            >
-                <section id="grid">
-                    <v-container>
-                        <v-row justify="space-between">
-                            <v-col cols="auto">
-                                <v-responsive
-                                    class="overflow-visible"
-                                    width="350"
-                                >
-                                    <h2 class="text-h4">
-                                        Shape the future of Vuetify
-                                    </h2>
-
-                                    <p class="text-success mt-3">
-                                        Support Development
-                                    </p>
-
-                                    <strong>Become a sponsor</strong>
-
-                                    <p class="mt-8">
-                                        Vuetify is free to use software under the <a href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener noreferrer">MIT</a> License and requires an extensive amount of time to maintain. Supporting development ensures Vuetify will be actively maintained.
-                                    </p>
-
-                                    <v-btn-alt
-                                        class="mt-6 "
-                                        href="https://github.com/sponsors/johnleider"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        Support now
-                                    </v-btn-alt>
-                                </v-responsive>
-                            </v-col>
-                        </v-row>
-                    </v-container>
-                </section>
-            </v-sheet>
-        </v-main>
-
-        <v-footer>
-            <v-container class="text-overline d-flex align-center justify-space-between">
-                <div>
-                    Copyright &copy; 2022 Vuetify, LLC
-                </div>
-
-                <v-icon icon="mdi-vuetify" size="x-large" />
-            </v-container>
-        </v-footer>
-    </v-app>
+        <div class="contacts">
+          <span> khangnguyen0318@gmail.com </span>
+          <span> +84 903 100 458 </span>
+        </div>
+      </section>
+    </v-main>
+  </v-app>
 </template>
 
 <script lang="ts">
-export default { name: 'App' }
+import { defaultMoonStyle } from './constants/style.constant';
+import { APIFactoryService } from './services/api-factory.service';
+import router from './router';
+
+const apiService: APIFactoryService = new APIFactoryService();
+
+export default {
+  data() {
+    const prefixPath = `${apiService.isDevEnvironment() ? './src' : '.'}`;
+
+    return {
+      style: defaultMoonStyle,
+      appLogo: `${prefixPath}/assets/logo.svg`,
+      blueLogo: `${prefixPath}/assets/Logo_xanh.png`,
+      products: [
+        {
+          id: 1,
+          title: 'KangNG',
+          route: 'kangng'
+        }/* ,
+        {
+          id: 2, 
+          title: 'Evy',
+          route: 'assistantEve'
+        } */
+      ]
+    }
+  },
+  methods: {
+    scrollToDiscoverySection(id: string) {
+      document.getElementById(id)?.scrollIntoView();
+    },
+    navigateToPage(pageName: string): void {
+      router.push({ name: pageName });
+    },
+  },
+}
 </script>
