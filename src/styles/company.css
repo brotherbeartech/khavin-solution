@@ -16,10 +16,10 @@
 
 .member-list {
     height: 400px;
-    background-color: #0036525e;
+    background-color: #e3fff15e;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .member-list > .member-box {
@@ -28,11 +28,18 @@
     width: 30%;
     height: 265px;
     margin: 0 15px;
+    min-width: 350px;
 }
 
 .member-box > .member-avatar {
     display: flex;
     margin-right: 15px;
+}
+
+.slogan-content {
+    max-height: 200px;
+    min-width: 150px;
+    overflow-x: auto;
 }
 
 .member-avatar > .devider-item {

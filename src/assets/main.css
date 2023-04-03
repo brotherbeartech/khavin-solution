@@ -21,9 +21,13 @@ a,
   backdrop-filter: blur(10px);
 }
 
-.khavin-moon-style {
-  background-color: #062231;
-  color: #dddddd;
+.borther-bear-style {
+  background-color: #ffffff;
+  color: #333;
+  background-image: url('../assets/landing_background.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .cursor-pointer {
@@ -46,8 +50,8 @@ a,
   color: rgb(0, 202, 0);
 }
 
-.light-font-color {
-  color: #dddddd;
+.primary-font-color {
+  color: #3f6e40;
 }
 
 .dropdown-light-theme {

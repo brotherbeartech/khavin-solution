@@ -9,23 +9,24 @@
 .btn-primary {
     color: #ececec;
     font-weight: bold;
-    border-color: #0096EA;
-    background-color: #0096EA;
+    border-color: #326836;
+    background-color: #326836;
+    padding: 10px 15px;
 }
 
 .btn-primary:hover {
-    background-color: #16aaff;
-    border-color: #16aaff;
+    background-color: #39833e;
+    border-color: #39833e;
 }
 
 .btn-trans-fill-primary {
-    color: #0096EA;
-    border-color: #0096EA;
+    color: #3f6e43;
+    border-color: #326836;
 }
 
 .btn-trans-fill-primary:hover {
-    color: #16aaff;
-    border-color: #16aaff;
+    color: #3e6b41;
+    border-color: #2d5e31;
 }
 
 .btn-transparent {

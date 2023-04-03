@@ -1,10 +1,11 @@
 <template>
   <v-app :class="style.appClassStyle">
-    <v-app-bar :color="style.appBarBackgroundColor" :elevation="10" rounded>
+    <v-app-bar :color="style.appBarBackgroundColor" rounded>
       <v-container class="d-flex align-center py-0">
         <v-app-bar-title class="pl-0">
           <div class="d-flex align-center">
             <v-avatar rounded="0" class="mr-3" :image="appLogo" />
+            <span> BROTHER BEAR TECHNOLOGY </span>
           </div>
         </v-app-bar-title>
 
@@ -19,7 +20,7 @@
                 :min-width="100"
                 v-bind="props"
               >
-                <span class="light-font-color"> Products </span>
+                <span> Products </span>
               </v-btn>
             </template>
 
@@ -36,21 +37,22 @@
             </v-list>
           </v-menu>
 
-          <span class="company-menu cursor-pointer mr-3" @click="navigateToPage('company')"> COMPANY </span>
+          <span class="company-menu cursor-pointer mr-3" @click="navigateToPage('company')"> TEAM </span>
           <button class="btn btn-primary" @click="scrollToDiscoverySection('stayConnectedSection')"> CONTACT US
           </button>
         </div>
       </v-container>
     </v-app-bar>
 
+    <div class="blur-layout"></div>
     <v-main>
       <router-view></router-view>
 
       <section class="khavin-footer-element d-flex align-center justify-end">
         <div class="khavin-authorize d-flex align-center">
-          <v-img :src="blueLogo" width="122" height="45"></v-img>
+          <!-- <v-img :src="blueLogo" width="122" height="45"></v-img> -->
 
-          <span>© 2021. All rights reserved. Khavin Solution</span>
+          <span>© 2021. All rights reserved. Brother Bear Technology</span>
         </div>
 
         <div class="contacts">
@@ -75,7 +77,7 @@ export default {
 
     return {
       style: defaultMoonStyle,
-      appLogo: `${prefixPath}/assets/logo.svg`,
+      appLogo: `${prefixPath}/assets/brother_bear_logo.png`,
       blueLogo: `${prefixPath}/assets/Logo_xanh.png`,
       products: [
         {

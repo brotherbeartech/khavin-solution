@@ -1,14 +1,13 @@
 <template>
   <section id="khavin_banner" class="home-section">
     <div class="banner">
-      <div class="blur-layer"></div>
       <div class="banner-content">
         <div class="logo">
           <v-img :src="appLogo" height="400" />
         </div>
 
         <div class="banner-title">
-          <h1 :style="{ 'color': style.priorityFontColor }"> KHAVIN SOLUTION </h1>
+          <h1 :style="{ 'color': style.priorityFontColor }"> Brother Bear Technology </h1>
           <h2> <i> EVERYTHING IS POSSIBLE </i> </h2>
           <div class="w-100 d-flex align-center justify-center">
             <button class="btn btn-trans-fill-primary" :style="{ 'font-size': '32px' }"
@@ -38,17 +37,17 @@
           <div class="discovery-content-item-details">
             <h1 class="khavin-title primary-font-color"> Make The Future </h1>
             <h2 class="khavin-sub-title primary-font-color">
-              Of Technilogy <span class="light-font-color">Beautiful</span>
+              Of Technilogy <span>Beautiful</span>
             </h2>
-            <p class="light-font-color">
+            <p>
               We provide mission-critical IT services that transform global businesses. We deliver
               excellence for our customers, colleagues and communities around the world.
             </p>
           </div>
 
-          <div class="discovery-content-item-image">
+          <!-- <div class="discovery-content-item-image">
             <v-img :src="futureExplainPic" width="350" height="350"></v-img>
-          </div>
+          </div> -->
         </div>
       </template>
 
@@ -56,19 +55,19 @@
         <div class="discovery-content-item">
           <div class="discovery-content-item-details">
             <h1 class="khavin-title primary-font-color"> Deliver </h1>
-            <h2 class="khavin-sub-title light-font-color">
+            <h2 class="khavin-sub-title">
               The Mission Critical IT Services That Move The World
             </h2>
 
-            <p class="light-font-color">
+            <p>
               We appreciate products developed and operated by talented leaders and always listen to
               improve day by day.
             </p>
           </div>
 
-          <div class="discovery-content-item-image">
+          <!-- <div class="discovery-content-item-image">
             <v-img :src="handshakepic" width="350" height="350"></v-img>
-          </div>
+          </div> -->
         </div>
       </template>
 
@@ -77,16 +76,16 @@
           <div class="discovery-content-item-details">
             <h1 class="khavin-title primary-font-color"> Services </h1>
 
-            <p class="light-font-color">
+            <p>
               We are The Semi Product Company. We provide a platform service to manage the Software
               Projects. We are Professional Agency ready for listening, development also helps you
               grow your business. Don't be waiting we are here to listen to you.
             </p>
           </div>
 
-          <div class="discovery-content-item-image">
+          <!-- <div class="discovery-content-item-image">
             <v-img :src="constructionPic" width="350" height="350"></v-img>
-          </div>
+          </div> -->
         </div>
       </template>
     </div>
@@ -97,12 +96,12 @@
       <h1 class="khavin-title primary-font-color"> Our Customers </h1>
 
       <div class="customer-container">
-        <h2 class="khavin-sub-title light-font-color"> {{ selectedCustomer.name }} </h2>
+        <h2 class="khavin-sub-title"> {{ selectedCustomer.name }} </h2>
 
         <div class="w-100 h-100 d-flex customer-paragraphs">
           <v-img :src="selectedCustomer.icon" width="450" height="450"></v-img>
 
-          <div class="pragraphs light-font-color">
+          <div class="pragraphs">
             <template v-for="paragraph in selectedCustomer.contents">
               <p class="customer-paragraph"> {{ paragraph }} </p>
             </template>
@@ -145,7 +144,7 @@
         </div>
 
         <div class="stay-connect-line">
-          <v-btn class="btn btn-primary m-r-15" rounded="lg" @click="submitContactForm()"> Submit </v-btn>
+          <button class="btn btn-primary m-r-15" rounded="lg" @click="submitContactForm()"> Submit </button>
 
           <span class="danger-message" v-if="errorMessage"> {{ errorMessage }} </span>
           <span class="success-message" v-if="successMessage"> {{ successMessage }} </span>
@@ -186,7 +185,7 @@
         contactHint: '',
         errorMessage: '',
         successMessage: '',
-        appLogo: `${prefixPath}/assets/logo.svg`,
+        appLogo: `${prefixPath}/assets/brother_bear_logo.png`,
         futureExplainPic: `${prefixPath}/assets/futures_explain.png`,
         handshakepic: `${prefixPath}/assets/HandShake.png`,
         constructionPic: `${prefixPath}/assets/construction.png`

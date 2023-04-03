@@ -27,16 +27,12 @@
 }
 
 #khavin_banner > .banner {
-    background-image: url('../assets/landing_background.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     width: 100%;
     height: 100%;
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .discovery-section {
@@ -45,27 +41,19 @@
     padding: 0 100px;
 }
 
-.customer-section {
-    background-color: #a5e6ff;
-    background-image: url('../assets/skyscrapers-bg.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-}
 
 .customer-section > .customers-info-container {
-    background-color: rgba(39, 65, 80, 95%);
     padding: 50px 20px;
 }
 
-.banner > .blur-layer {
-    background-color: rgba(2, 35, 53, 0.75);
+.blur-layout {
+    background: linear-gradient(180deg, rgb(211 231 205) 0%, rgba(255,255,255,0.24413515406162467) 84%, rgba(255,255,255,1) 100%);
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
+    z-index: 0;
 }
 
 .customers-info-container > h1 {
@@ -120,7 +108,7 @@
 
 .banner-content > .banner-title > h2 {
     font-size: 55px;
-    color: #0096EA;
+    color: #3f6e40;
 }
 
 .discovery-section > .discovery-switch {
@@ -137,7 +125,7 @@
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    background-color: #A7DFFF;
+    background-color: #466e48;
     margin: 10px;
 }
 
@@ -148,7 +136,7 @@
 }
 
 .discovery-switch > .discovery-active-node {
-    background-color: #0096EA;
+    background-color: #126116;
 }
 
 .discovery-section > .discovery-content {
@@ -170,15 +158,8 @@
     max-width: 580px;
 }
 
-.stay-connect-section {
-    background-image: url('../assets/landing_background.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 
 .stay-connect-section > .stay-connect-container {
-    background-color: rgba(4, 69, 105, 60%);
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -200,7 +181,8 @@
 }
 
 .khavin-footer-element {
-    background-color: #074669;
+    background-color: #326836;
+    color: #f5f5f5da;
     width: 100%;
     height: 77px;
 }
