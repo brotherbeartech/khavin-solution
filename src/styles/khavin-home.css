@@ -1,0 +1,229 @@
+.v-main {
+    overflow-y: auto;
+}
+
+.primary-font-color {
+    color: #0096EA;
+}
+
+.light-font-color {
+    color: #56C2FF;
+}
+
+.home-section {
+    width: 100%;
+    height: 100%;
+}
+
+.khavin-title {
+    font-size: 72px;
+    font-weight: bold;
+    
+}
+
+.khavin-sub-title {
+    font-size: 48px;
+    line-height: 55px;
+}
+
+#khavin_banner > .banner {
+    background-image: url('../assets/landing_background.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.discovery-section {
+    position: relative;
+    display: flex;
+    padding: 0 100px;
+}
+
+.customer-section {
+    background-color: #a5e6ff;
+    background-image: url('../assets/skyscrapers-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.customer-section > .customers-info-container {
+    background-color: rgba(39, 65, 80, 95%);
+    padding: 50px 20px;
+}
+
+.banner > .blur-layer {
+    background-color: rgba(2, 35, 53, 0.75);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.customers-info-container > h1 {
+    text-align: center;
+}
+
+.customers-info-container > .customer-container {
+    padding: 0 55px;
+    margin-bottom: 20px;
+}
+
+.customers-info-container > .customer-list {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.customer-container > h2 {
+    text-align: center;
+}
+
+.customer-container > .customer-paragraphs {
+    align-items: center;
+    text-indent: 50px;
+}
+
+.customer-paragraphs > .paragraphs {
+    padding: 0 180px;
+}
+
+.banner > .banner-content {
+    display: flex;
+}
+
+.banner-content > .logo {
+    width: 250px;
+    height: 425px;
+}
+
+.banner-content > .banner-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.banner-content > .banner-title > h1 {
+    font-size: 65px;
+    font-weight: bold;
+}
+
+.banner-content > .banner-title > h2 {
+    font-size: 55px;
+    color: #0096EA;
+}
+
+.discovery-section > .discovery-switch {
+    width: 50px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.discovery-switch > .discovery-node {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #A7DFFF;
+    margin: 10px;
+}
+
+.discovery-switch > .discovery-devider {
+    width: 1px;
+    height: 15%;
+    border-left: 1px dashed #0096EA;
+}
+
+.discovery-switch > .discovery-active-node {
+    background-color: #0096EA;
+}
+
+.discovery-section > .discovery-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.discovery-content > .discovery-content-item {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 120px;
+    max-width: 1052px;
+}
+
+.discovery-content-item > .discovery-content-item-details {
+    max-width: 580px;
+}
+
+.stay-connect-section {
+    background-image: url('../assets/landing_background.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.stay-connect-section > .stay-connect-container {
+    background-color: rgba(4, 69, 105, 60%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.stay-connect-container > .stay-connect-logo {
+    flex: 0 auto;
+}
+
+.stay-connect-container > .stay-connect-form {
+    flex: 1;
+    max-width: 45%;
+}
+
+.stay-connect-form > .stay-connect-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.khavin-footer-element {
+    background-color: #074669;
+    width: 100%;
+    height: 77px;
+}
+
+.khavin-footer-element > .contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 0 20px 0 50px;
+}
+
+.company-menu {
+    border-bottom: 0;
+    padding: 0 8px;
+}
+
+.company-menu:hover {
+    border-bottom: 2px solid #0096EA;
+}
+
+@media (max-width: 768px) {
+    .pragraphs {
+        max-height: 400px;
+        overflow-y: auto;
+    }
+}

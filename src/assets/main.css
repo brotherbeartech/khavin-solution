@@ -1,11 +1,13 @@
 @import './base.css';
+@import '../styles/v-custom.css';
+@import '../styles/khavin-home.css';
+@import '../styles/button.css';
+@import '../styles/company.css';
 
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-
-  font-weight: normal;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
 }
 
 a,
@@ -13,6 +15,50 @@ a,
   text-decoration: none;
   color: hsla(160, 100%, 37%, 1);
   transition: 0.4s;
+}
+
+.v-toolbar {
+  backdrop-filter: blur(10px);
+}
+
+.khavin-moon-style {
+  background-color: #062231;
+  color: #dddddd;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.m-r-15 {
+  margin-right: 15px;
+}
+
+.font-style-italic {
+  font-style: italic;
+}
+
+.danger-message {
+  color: #e41616;
+}
+
+.success-message {
+  color: rgb(0, 202, 0);
+}
+
+.light-font-color {
+  color: #dddddd;
+}
+
+.dropdown-light-theme {
+  background-color: #ececec !important; 
+  color: #333;
+}
+
+.vertical-box-shadow {
+  -webkit-box-shadow: 0px 13px 16px -4px rgb(22 22 22);
+  -moz-box-shadow: 0px 13px 16px -4px rgb(22 22 22);
+  box-shadow: 0px 13px 16px -4px rgb(22 22 22);
 }
 
 @media (hover: hover) {
@@ -25,11 +71,5 @@ a,
   body {
     display: flex;
     place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
   }
 }
